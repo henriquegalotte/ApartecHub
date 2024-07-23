@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Broadlink</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        async function sendCommand(command) {
+            try {
+                const response = await fetch(`http://localhost:3000/sendCommand?command=${command}`);
+                const result = await response.text();
+                alert(result);
+            } catch (error) {
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Controle Broadlink</h1>
+        <button onclick="sendCommand('power')">Power</button>
+        <button onclick="sendCommand('volume_up')">Volume +</button>
+        <button onclick="sendCommand('volume_down')">Volume -</button>
+    </div>
+</body>
+</html>
