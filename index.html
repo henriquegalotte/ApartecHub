@@ -5,16 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle Broadlink</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        async function sendCommand(command) {
-            try {
-                const response = await fetch(`http://localhost:3000/sendCommand?command=${command}`);
-                const result = await response.text();
-                alert(result);
-            } catch (error) {
-                
-            }
-        }
+    <script src="script.js">
+        
     </script>
 </head>
 <body>
